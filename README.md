@@ -19,7 +19,7 @@ yarn add -D sinon-jest-matchers
 ```javascript
 // ./testSetup.js
 
-// add all jest-extended matchers
+// add all sinon-jest-matchers matchers
 import * as matchers from 'sinon-jest-matchers';
 expect.extend(matchers);
 
