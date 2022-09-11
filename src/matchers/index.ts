@@ -1,0 +1,9 @@
+export { sinonToBeCalled } from './sinonToBeCalled';
+export { sinonToBeCalledTimes } from './sinonToBeCalledTimes';
+export { sinonToBeCalledWith } from './sinonToBeCalledWith';
+export { sinonLastCalledWith } from './sinonLastCalledWith';
+export { sinonLastReturnedWith } from './sinonLastReturnedWith';
+export { sinonNthCalledWith } from './sinonNthCalledWith';
+export { sinonToReturn } from './sinonToReturn';
+export { sinonToReturnTimes } from './sinonToReturnTimes';
+export { sinonToReturnWith } from './sinonToReturnWith';
