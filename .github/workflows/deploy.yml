@@ -28,7 +28,7 @@ jobs:
           echo "NPM version $(npm --version)"
           echo "System Info $(uname -a)"
       - name: Install Project Dependencies
-        run: npm ci
+        run: npm i
 
       - name: Build
         run: npm run build
