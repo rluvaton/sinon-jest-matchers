@@ -49,7 +49,7 @@ To automatically extend `expect` with all matchers, you can use
 If your editor does not recognise the custom `sinon-jest-matchers` matchers, add a `global.d.ts` file to your project with:
 
 ```ts
-import 'jest-extended';
+import 'sinon-jest-matchers';
 ```
 
 _Note: When using `ts-jest >= 25.5.0`_
