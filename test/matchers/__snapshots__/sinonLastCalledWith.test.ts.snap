@@ -1,174 +1,174 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sinonLastCalledWith includes the custom mock name in the error message 1`] = `
-"[2mexpect([22m[31mnamed-mock[39m[2m).[22mnot[2m.[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(named-mock).not.sinonLastCalledWith(...expected)
 
-Expected: not [32m\\"foo\\"[39m, [32m\\"bar\\"[39m
+Expected: not \\"foo\\", \\"bar\\"
 
-Number of calls: [31m1[39m"
+Number of calls: 1"
 `;
 
 exports[`sinonLastCalledWith works only on spies or sinon.spy 1`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(received).sinonLastCalledWith(...expected)
 
-[1mMatcher error[22m: [31mreceived[39m value must be a stub or spy function
+Matcher error: received value must be a stub or spy function
 
 Received has type:  function
-Received has value: [31m[Function fn][39m"
+Received has value: [Function fn]"
 `;
 
 exports[`sinonLastCalledWith works when not called 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).sinonLastCalledWith(...expected)
 
-Expected: [32m\\"foo\\"[39m, [32m\\"bar\\"[39m
+Expected: \\"foo\\", \\"bar\\"
 
-Number of calls: [31m0[39m"
+Number of calls: 0"
 `;
 
 exports[`sinonLastCalledWith works with Immutable.js objects 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).not.sinonLastCalledWith(...expected)
 
-Expected: not [32mImmutable.Map {\\"a\\": {\\"b\\": \\"c\\"}}[39m, [32mImmutable.Map {\\"a\\": {\\"b\\": \\"c\\"}}[39m
+Expected: not Immutable.Map {\\"a\\": {\\"b\\": \\"c\\"}}, Immutable.Map {\\"a\\": {\\"b\\": \\"c\\"}}
 
-Number of calls: [31m1[39m"
+Number of calls: 1"
 `;
 
 exports[`sinonLastCalledWith works with Map 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).not.sinonLastCalledWith(...expected)
 
-Expected: not [32mMap {1 => 2, 2 => 1}[39m
+Expected: not Map {1 => 2, 2 => 1}
 
-Number of calls: [31m1[39m"
+Number of calls: 1"
 `;
 
 exports[`sinonLastCalledWith works with Map 2`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).sinonLastCalledWith(...expected)
 
-[32m- Expected[39m
-[31m+ Received[39m
+- Expected
++ Received
 
-[2m  Map {[22m
-[32m-   \\"a\\" => \\"b\\",[39m
-[32m-   \\"b\\" => \\"a\\",[39m
-[31m+   1 => 2,[39m
-[31m+   2 => 1,[39m
-[2m  }[22m,
+  Map {
+-   \\"a\\" => \\"b\\",
+-   \\"b\\" => \\"a\\",
++   1 => 2,
++   2 => 1,
+  },
 
-Number of calls: [31m1[39m"
+Number of calls: 1"
 `;
 
 exports[`sinonLastCalledWith works with Set 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).not.sinonLastCalledWith(...expected)
 
-Expected: not [32mSet {1, 2}[39m
+Expected: not Set {1, 2}
 
-Number of calls: [31m1[39m"
+Number of calls: 1"
 `;
 
 exports[`sinonLastCalledWith works with Set 2`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).sinonLastCalledWith(...expected)
 
-[32m- Expected[39m
-[31m+ Received[39m
+- Expected
++ Received
 
-[2m  Set {[22m
-[32m-   3,[39m
-[32m-   4,[39m
-[31m+   1,[39m
-[31m+   2,[39m
-[2m  }[22m,
+  Set {
+-   3,
+-   4,
++   1,
++   2,
+  },
 
-Number of calls: [31m1[39m"
+Number of calls: 1"
 `;
 
 exports[`sinonLastCalledWith works with arguments that don't match 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).sinonLastCalledWith(...expected)
 
-Expected: [32m\\"foo\\"[39m, [32m\\"bar\\"[39m
-Received: [2m\\"foo\\"[22m, [31m\\"bar1\\"[39m
+Expected: \\"foo\\", \\"bar\\"
+Received: \\"foo\\", \\"bar1\\"
 
-Number of calls: [31m1[39m"
+Number of calls: 1"
 `;
 
 exports[`sinonLastCalledWith works with arguments that don't match in number of arguments 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).sinonLastCalledWith(...expected)
 
-Expected: [32m\\"foo\\"[39m, [32m\\"bar\\"[39m
-Received: [2m\\"foo\\"[22m, [2m\\"bar\\"[22m, [31m\\"plop\\"[39m
+Expected: \\"foo\\", \\"bar\\"
+Received: \\"foo\\", \\"bar\\", \\"plop\\"
 
-Number of calls: [31m1[39m"
+Number of calls: 1"
 `;
 
 exports[`sinonLastCalledWith works with arguments that don't match with matchers 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).sinonLastCalledWith(...expected)
 
-Expected: [32mAny<String>[39m, [32mAny<Number>[39m
-Received: [2m\\"foo\\"[22m, [31m\\"bar\\"[39m
+Expected: Any<String>, Any<Number>
+Received: \\"foo\\", \\"bar\\"
 
-Number of calls: [31m1[39m"
+Number of calls: 1"
 `;
 
 exports[`sinonLastCalledWith works with arguments that don't match with matchers even when argument is undefined 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).sinonLastCalledWith(...expected)
 
-Expected: [32m\\"foo\\"[39m, [32mAny<String>[39m
-Received: [2m\\"foo\\"[22m, [31mundefined[39m
+Expected: \\"foo\\", Any<String>
+Received: \\"foo\\", undefined
 
-Number of calls: [31m1[39m"
+Number of calls: 1"
 `;
 
 exports[`sinonLastCalledWith works with arguments that match 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).not.sinonLastCalledWith(...expected)
 
-Expected: not [32m\\"foo\\"[39m, [32m\\"bar\\"[39m
+Expected: not \\"foo\\", \\"bar\\"
 
-Number of calls: [31m1[39m"
+Number of calls: 1"
 `;
 
 exports[`sinonLastCalledWith works with arguments that match with matchers 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).not.sinonLastCalledWith(...expected)
 
-Expected: not [32mAny<String>[39m, [32mAny<String>[39m
-Received:     [31m0[39m, [31m[\\"foo\\", \\"bar\\"][39m
+Expected: not Any<String>, Any<String>
+Received:     0, [\\"foo\\", \\"bar\\"]
 
-Number of calls: [31m1[39m"
+Number of calls: 1"
 `;
 
 exports[`sinonLastCalledWith works with many arguments 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).not.sinonLastCalledWith(...expected)
 
-Expected: not [32m\\"foo\\"[39m, [32m\\"bar\\"[39m
+Expected: not \\"foo\\", \\"bar\\"
 Received
-       2:     [2m\\"foo\\"[22m, [31m\\"bar1\\"[39m
-->     3:     [2m\\"foo\\"[22m, [2m\\"bar\\"[22m
+       2:     \\"foo\\", \\"bar1\\"
+->     3:     \\"foo\\", \\"bar\\"
 
-Number of calls: [31m3[39m"
+Number of calls: 3"
 `;
 
 exports[`sinonLastCalledWith works with many arguments that don't match 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).sinonLastCalledWith(...expected)
 
-Expected: [32m\\"foo\\"[39m, [32m\\"bar\\"[39m
+Expected: \\"foo\\", \\"bar\\"
 Received
-       2: [2m\\"foo\\"[22m, [31m\\"bar2\\"[39m
-->     3: [2m\\"foo\\"[22m, [31m\\"bar3\\"[39m
+       2: \\"foo\\", \\"bar2\\"
+->     3: \\"foo\\", \\"bar3\\"
 
-Number of calls: [31m3[39m"
+Number of calls: 3"
 `;
 
 exports[`sinonLastCalledWith works with trailing undefined arguments if requested by the match query 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).not.sinonLastCalledWith(...expected)
 
-Expected: not [32m\\"foo\\"[39m, [32mundefined[39m
+Expected: not \\"foo\\", undefined
 
-Number of calls: [31m1[39m"
+Number of calls: 1"
 `;
 
 exports[`sinonLastCalledWith works with trailing undefined arguments when explicitly requested as optional by matcher 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonLastCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"expect(sinon.spy()).not.sinonLastCalledWith(...expected)
 
-Expected: not [32m\\"foo\\"[39m, [32moptionalFn<>[39m
-Received:     [31m0[39m, [31m[\\"foo\\", undefined][39m
+Expected: not \\"foo\\", optionalFn<>
+Received:     0, [\\"foo\\", undefined]
 
-Number of calls: [31m1[39m"
+Number of calls: 1"
 `;

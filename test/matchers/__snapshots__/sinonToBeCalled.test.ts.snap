@@ -1,53 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sinonToBeCalled .not fails with any argument passed 1`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22msinonToBeCalled[2m()[22m
+"expect(received).not.sinonToBeCalled()
 
-[1mMatcher error[22m: this matcher must not have an expected argument
+Matcher error: this matcher must not have an expected argument
 
 Expected has type:  number
-Expected has value: [32m555[39m"
+Expected has value: 555"
 `;
 
 exports[`sinonToBeCalled .not passes when called 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToBeCalled[2m()[22m
+"expect(sinon.spy()).sinonToBeCalled()
 
-Expected number of calls: >= [32m1[39m
-Received number of calls:    [31m0[39m"
+Expected number of calls: >= 1
+Received number of calls:    0"
 `;
 
 exports[`sinonToBeCalled fails with any argument passed 1`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22msinonToBeCalled[2m()[22m
+"expect(received).sinonToBeCalled()
 
-[1mMatcher error[22m: this matcher must not have an expected argument
+Matcher error: this matcher must not have an expected argument
 
 Expected has type:  number
-Expected has value: [32m555[39m"
+Expected has value: 555"
 `;
 
 exports[`sinonToBeCalled includes the custom mock name in the error message 1`] = `
-"[2mexpect([22m[31mnamed-mock[39m[2m).[22mnot[2m.[22msinonToBeCalled[2m()[22m
+"expect(named-mock).not.sinonToBeCalled()
 
-Expected number of calls: [32m0[39m
-Received number of calls: [31m1[39m
+Expected number of calls: 0
+Received number of calls: 1
 
 1: called with 0 arguments"
 `;
 
 exports[`sinonToBeCalled passes when called 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToBeCalled[2m()[22m
+"expect(sinon.spy()).not.sinonToBeCalled()
 
-Expected number of calls: [32m0[39m
-Received number of calls: [31m1[39m
+Expected number of calls: 0
+Received number of calls: 1
 
-1: [31m\\"arg0\\"[39m, [31m\\"arg1\\"[39m, [31m\\"arg2\\"[39m"
+1: \\"arg0\\", \\"arg1\\", \\"arg2\\""
 `;
 
 exports[`sinonToBeCalled works only on spies or jest.fn 1`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22msinonToBeCalled[2m()[22m
+"expect(received).sinonToBeCalled()
 
-[1mMatcher error[22m: [31mreceived[39m value must be a stub or spy function
+Matcher error: received value must be a stub or spy function
 
 Received has type:  function
-Received has value: [31m[Function fn][39m"
+Received has value: [Function fn]"
 `;

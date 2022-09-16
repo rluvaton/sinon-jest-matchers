@@ -1,147 +1,147 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sinonToBeCalledTimes .not only accepts a number argument 1`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(received).not.sinonToBeCalledTimes(expected)
 
-[1mMatcher error[22m: [32mexpected[39m value must be a non-negative integer
+Matcher error: expected value must be a non-negative integer
 
 Expected has type:  object
-Expected has value: [32m{}[39m"
+Expected has value: {}"
 `;
 
 exports[`sinonToBeCalledTimes .not only accepts a number argument 2`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(received).not.sinonToBeCalledTimes(expected)
 
-[1mMatcher error[22m: [32mexpected[39m value must be a non-negative integer
+Matcher error: expected value must be a non-negative integer
 
 Expected has type:  array
-Expected has value: [32m[][39m"
+Expected has value: []"
 `;
 
 exports[`sinonToBeCalledTimes .not only accepts a number argument 3`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(received).not.sinonToBeCalledTimes(expected)
 
-[1mMatcher error[22m: [32mexpected[39m value must be a non-negative integer
+Matcher error: expected value must be a non-negative integer
 
 Expected has type:  boolean
-Expected has value: [32mtrue[39m"
+Expected has value: true"
 `;
 
 exports[`sinonToBeCalledTimes .not only accepts a number argument 4`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(received).not.sinonToBeCalledTimes(expected)
 
-[1mMatcher error[22m: [32mexpected[39m value must be a non-negative integer
+Matcher error: expected value must be a non-negative integer
 
 Expected has type:  string
-Expected has value: [32m\\"a\\"[39m"
+Expected has value: \\"a\\""
 `;
 
 exports[`sinonToBeCalledTimes .not only accepts a number argument 5`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(received).not.sinonToBeCalledTimes(expected)
 
-[1mMatcher error[22m: [32mexpected[39m value must be a non-negative integer
+Matcher error: expected value must be a non-negative integer
 
 Expected has type:  map
-Expected has value: [32mMap {}[39m"
+Expected has value: Map {}"
 `;
 
 exports[`sinonToBeCalledTimes .not only accepts a number argument 6`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(received).not.sinonToBeCalledTimes(expected)
 
-[1mMatcher error[22m: [32mexpected[39m value must be a non-negative integer
+Matcher error: expected value must be a non-negative integer
 
 Expected has type:  function
-Expected has value: [32m[Function anonymous][39m"
+Expected has value: [Function anonymous]"
 `;
 
 exports[`sinonToBeCalledTimes .not passes if function called less than expected times 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(sinon.spy()).sinonToBeCalledTimes(expected)
 
-Expected number of calls: [32m2[39m
-Received number of calls: [31m1[39m"
+Expected number of calls: 2
+Received number of calls: 1"
 `;
 
 exports[`sinonToBeCalledTimes .not passes if function called more than expected times 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(sinon.spy()).sinonToBeCalledTimes(expected)
 
-Expected number of calls: [32m2[39m
-Received number of calls: [31m3[39m"
+Expected number of calls: 2
+Received number of calls: 3"
 `;
 
 exports[`sinonToBeCalledTimes .not works only on spies or jest.fn 1`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22mnot[2m.[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(received).not.sinonToBeCalledTimes(expected)
 
-[1mMatcher error[22m: [31mreceived[39m value must be a stub or spy function
+Matcher error: received value must be a stub or spy function
 
 Received has type:  function
-Received has value: [31m[Function fn][39m"
+Received has value: [Function fn]"
 `;
 
 exports[`sinonToBeCalledTimes includes the custom mock name in the error message 1`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(received).sinonToBeCalledTimes(expected)
 
-[1mMatcher error[22m: [31mreceived[39m value must be a stub or spy function
+Matcher error: received value must be a stub or spy function
 
 Received has type:  function
-Received has value: [31m[Function mockConstructor][39m"
+Received has value: [Function mockConstructor]"
 `;
 
 exports[`sinonToBeCalledTimes only accepts a number argument 1`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(received).sinonToBeCalledTimes(expected)
 
-[1mMatcher error[22m: [32mexpected[39m value must be a non-negative integer
+Matcher error: expected value must be a non-negative integer
 
 Expected has type:  object
-Expected has value: [32m{}[39m"
+Expected has value: {}"
 `;
 
 exports[`sinonToBeCalledTimes only accepts a number argument 2`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(received).sinonToBeCalledTimes(expected)
 
-[1mMatcher error[22m: [32mexpected[39m value must be a non-negative integer
+Matcher error: expected value must be a non-negative integer
 
 Expected has type:  array
-Expected has value: [32m[][39m"
+Expected has value: []"
 `;
 
 exports[`sinonToBeCalledTimes only accepts a number argument 3`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(received).sinonToBeCalledTimes(expected)
 
-[1mMatcher error[22m: [32mexpected[39m value must be a non-negative integer
+Matcher error: expected value must be a non-negative integer
 
 Expected has type:  boolean
-Expected has value: [32mtrue[39m"
+Expected has value: true"
 `;
 
 exports[`sinonToBeCalledTimes only accepts a number argument 4`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(received).sinonToBeCalledTimes(expected)
 
-[1mMatcher error[22m: [32mexpected[39m value must be a non-negative integer
+Matcher error: expected value must be a non-negative integer
 
 Expected has type:  string
-Expected has value: [32m\\"a\\"[39m"
+Expected has value: \\"a\\""
 `;
 
 exports[`sinonToBeCalledTimes only accepts a number argument 5`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(received).sinonToBeCalledTimes(expected)
 
-[1mMatcher error[22m: [32mexpected[39m value must be a non-negative integer
+Matcher error: expected value must be a non-negative integer
 
 Expected has type:  map
-Expected has value: [32mMap {}[39m"
+Expected has value: Map {}"
 `;
 
 exports[`sinonToBeCalledTimes only accepts a number argument 6`] = `
-"[2mexpect([22m[31mreceived[39m[2m).[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(received).sinonToBeCalledTimes(expected)
 
-[1mMatcher error[22m: [32mexpected[39m value must be a non-negative integer
+Matcher error: expected value must be a non-negative integer
 
 Expected has type:  function
-Expected has value: [32m[Function anonymous][39m"
+Expected has value: [Function anonymous]"
 `;
 
 exports[`sinonToBeCalledTimes passes if function called equal to expected times 1`] = `
-"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"expect(sinon.spy()).not.sinonToBeCalledTimes(expected)
 
-Expected number of calls: not [32m2[39m"
+Expected number of calls: not 2"
 `;
