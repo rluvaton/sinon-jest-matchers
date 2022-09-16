@@ -15,6 +15,7 @@ import {
   printExpectedReceivedCallsPositive,
   printReceivedCallsNegative,
 } from '../utils/jest-utils';
+import {getSpyName} from "../utils/sinon-utils";
 
 const matcherName = 'sinonNthCalledWith';
 
@@ -38,7 +39,7 @@ export function sinonNthCalledWith(this: any, received: sinon.SinonSpy, nth: num
     );
   }
 
-  const receivedName = received.name;
+  const receivedName = getSpyName(received);
 
   const calls = received.args;
   const length = calls.length;

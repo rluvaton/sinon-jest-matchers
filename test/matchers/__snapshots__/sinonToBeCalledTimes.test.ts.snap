@@ -55,14 +55,14 @@ Expected has value: [32m[Function anonymous][39m"
 `;
 
 exports[`sinonToBeCalledTimes .not passes if function called less than expected times 1`] = `
-"[2mexpect.[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
 
 Expected number of calls: [32m2[39m
 Received number of calls: [31m1[39m"
 `;
 
 exports[`sinonToBeCalledTimes .not passes if function called more than expected times 1`] = `
-"[2mexpect.[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
 
 Expected number of calls: [32m2[39m
 Received number of calls: [31m3[39m"
@@ -141,7 +141,7 @@ Expected has value: [32m[Function anonymous][39m"
 `;
 
 exports[`sinonToBeCalledTimes passes if function called equal to expected times 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToBeCalledTimes[2m([22m[32mexpected[39m[2m)[22m
 
 Expected number of calls: not [32m2[39m"
 `;

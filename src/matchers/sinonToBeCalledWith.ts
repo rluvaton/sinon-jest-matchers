@@ -9,6 +9,7 @@ import {
   printExpectedReceivedCallsPositive,
   printReceivedCallsNegative,
 } from '../utils/jest-utils';
+import {getSpyName} from "../utils/sinon-utils";
 
 const matcherName = 'sinonToBeCalledWith';
 
@@ -25,7 +26,7 @@ export function sinonToBeCalledWith(
 
   ensureSinonStubOrSpy(received, matcherName, expectedArgument, options);
 
-  const receivedName = received.name;
+  const receivedName = getSpyName(received);
 
   const calls = received.getCalls().map((call) => call.args);
 

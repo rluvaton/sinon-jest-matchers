@@ -55,27 +55,27 @@ Expected has value: [32m[Function anonymous][39m"
 `;
 
 exports[`sinonToReturnTimes .not passes if function called less than expected times 1`] = `
-"[2mexpect.[22msinonToReturnTimes[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToReturnTimes[2m([22m[32mexpected[39m[2m)[22m
 
 Expected number of returns: [32m2[39m
 Received number of returns: [31m1[39m"
 `;
 
 exports[`sinonToReturnTimes .not passes if function returned more than expected times 1`] = `
-"[2mexpect.[22msinonToReturnTimes[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToReturnTimes[2m([22m[32mexpected[39m[2m)[22m
 
 Expected number of returns: [32m2[39m
 Received number of returns: [31m3[39m"
 `;
 
 exports[`sinonToReturnTimes calls that return undefined are counted as returns 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToReturnTimes[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToReturnTimes[2m([22m[32mexpected[39m[2m)[22m
 
 Expected number of returns: not [32m2[39m"
 `;
 
 exports[`sinonToReturnTimes calls that throw are not counted 1`] = `
-"[2mexpect.[22msinonToReturnTimes[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToReturnTimes[2m([22m[32mexpected[39m[2m)[22m
 
 Expected number of returns: [32m3[39m
 Received number of returns: [31m2[39m
@@ -144,7 +144,7 @@ Expected has value: [32m[Function anonymous][39m"
 `;
 
 exports[`sinonToReturnTimes passes if function returned equal to expected times 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToReturnTimes[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToReturnTimes[2m([22m[32mexpected[39m[2m)[22m
 
 Expected number of returns: not [32m2[39m"
 `;

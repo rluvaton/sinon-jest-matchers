@@ -1,6 +1,6 @@
 import { ensureNoExpected, matcherHint, MatcherHintOptions, printExpected, printReceived } from 'jest-matcher-utils';
 import { ensureSinonStubOrSpy, PRINT_LIMIT } from '../utils/jest-utils';
-import { convertSinonCallToJestResult } from '../utils/sinon-utils';
+import {convertSinonCallToJestResult, getSpyName} from '../utils/sinon-utils';
 
 const matcherName = 'sinonToReturn';
 
@@ -13,7 +13,7 @@ export function sinonToReturn(this: any, received: sinon.SinonSpy, expected: unk
   ensureNoExpected(expected, matcherName, options);
   ensureSinonStubOrSpy(received, matcherName, expectedArgument, options);
 
-  const receivedName = received.name;
+  const receivedName = getSpyName(received);
 
   const results = received.getCalls().map((callInfo) => convertSinonCallToJestResult(callInfo));
 

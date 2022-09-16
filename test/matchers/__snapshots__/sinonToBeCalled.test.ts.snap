@@ -10,7 +10,7 @@ Expected has value: [32m555[39m"
 `;
 
 exports[`sinonToBeCalled .not passes when called 1`] = `
-"[2mexpect.[22msinonToBeCalled[2m()[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToBeCalled[2m()[22m
 
 Expected number of calls: >= [32m1[39m
 Received number of calls:    [31m0[39m"
@@ -35,7 +35,7 @@ Received number of calls: [31m1[39m
 `;
 
 exports[`sinonToBeCalled passes when called 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToBeCalled[2m()[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToBeCalled[2m()[22m
 
 Expected number of calls: [32m0[39m
 Received number of calls: [31m1[39m

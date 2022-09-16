@@ -6,7 +6,7 @@ import {
   printReceived,
 } from 'jest-matcher-utils';
 import { ensureSinonStubOrSpy } from '../utils/jest-utils';
-import { convertSinonCallToJestResult } from '../utils/sinon-utils';
+import {convertSinonCallToJestResult, getSpyName} from '../utils/sinon-utils';
 import sinon from 'sinon';
 
 const matcherName = 'sinonToReturnTimes';
@@ -20,7 +20,7 @@ export function sinonToReturnTimes(this: any, received: sinon.SinonSpy, expected
   ensureExpectedIsNonNegativeInteger(expected, matcherName, options);
   ensureSinonStubOrSpy(received, matcherName, expectedArgument, options);
 
-  const receivedName = received.name;
+  const receivedName = getSpyName(received);
 
   const results = received.getCalls().map((callInfo) => convertSinonCallToJestResult(callInfo));
 

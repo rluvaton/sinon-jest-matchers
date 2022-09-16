@@ -1,4 +1,68 @@
 # Sinon Jest Matchers
+![npm](https://img.shields.io/npm/v/sinon-jest-matchers)
+
+## Why
+
+### TL;DR
+Without this library, in case of an error you will get very vague error messages
+
+**Before:**
+```console
+expect(received).toEqual(expected) // deep equality
+
+Expected: 2
+Received: 1
+```
+
+**After:**
+```console
+expect(received).toEqual(expected) // deep equality
+
+Expected: 2
+Received: 1
+```
+
+### Deeper explanation:
+**Example:**
+If you want to use sinon spies you will need to do something like this:
+```js
+test('Check that spy called', async () => {
+    const mySpy = sinon.spy();
+
+    mySpy();
+    
+    // Triggering an error
+    expect(mySpy.callCount).toEqual(2);
+});
+```
+
+The error message will be:
+```console
+expect(sinon.spy()).sinonToBeCalledTimes(expected)
+
+Expected number of calls: 2
+Received number of calls: 1
+```
+
+However, if you use this library, the test will look like this:
+```js
+test('Check that spy called', async () => {
+    const mySpy = sinon.spy();
+
+    mySpy();
+
+    // Triggering an error
+    expect(mySpy).sinonToBeCalledTimes(2);
+});
+```
+
+And the error message will be:
+```console
+expect.sinonToBeCalledTimes(expected)
+
+Expected number of calls: 2
+Received number of calls: 1
+```
 
 ## Installation
 

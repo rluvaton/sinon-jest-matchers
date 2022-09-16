@@ -10,7 +10,7 @@ Expected has value: [32m555[39m"
 `;
 
 exports[`sinonToReturn .not passes when all calls throw 1`] = `
-"[2mexpect.[22msinonToReturn[2m()[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToReturn[2m()[22m
 
 Expected number of returns: >= [32m1[39m
 Received number of returns:    [31m0[39m
@@ -18,7 +18,7 @@ Received number of calls:      [31m2[39m"
 `;
 
 exports[`sinonToReturn .not passes when not returned 1`] = `
-"[2mexpect.[22msinonToReturn[2m()[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToReturn[2m()[22m
 
 Expected number of returns: >= [32m1[39m
 Received number of returns:    [31m0[39m"
@@ -52,7 +52,7 @@ Received number of returns: [31m1[39m
 `;
 
 exports[`sinonToReturn passes when at least one call does not throw 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToReturn[2m()[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToReturn[2m()[22m
 
 Expected number of returns: [32m0[39m
 Received number of returns: [31m2[39m
@@ -64,7 +64,7 @@ Received number of calls:   [31m3[39m"
 `;
 
 exports[`sinonToReturn passes when returned 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToReturn[2m()[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToReturn[2m()[22m
 
 Expected number of returns: [32m0[39m
 Received number of returns: [31m1[39m
@@ -73,7 +73,7 @@ Received number of returns: [31m1[39m
 `;
 
 exports[`sinonToReturn passes when undefined is returned 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToReturn[2m()[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToReturn[2m()[22m
 
 Expected number of returns: [32m0[39m
 Received number of returns: [31m1[39m

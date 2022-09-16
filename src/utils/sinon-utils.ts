@@ -21,3 +21,7 @@ export function convertSinonCallToJestResult<T = any>(spyCall: SinonSpyCall<any,
     value: spyCall.returnValue,
   };
 }
+
+export function getSpyName(spy: sinon.SinonSpy, defaultName = 'sinon.spy()'): string {
+  return spy.name || defaultName;
+}

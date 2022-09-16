@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sinonToReturnWith a call that throws is not considered to have returned 1`] = `
-"[2mexpect.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
 
 Expected: [32mundefined[39m
 Received: function call threw an error
@@ -28,7 +28,7 @@ Received has value: [31m[Function fn][39m"
 `;
 
 exports[`sinonToReturnWith works when not called 1`] = `
-"[2mexpect.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
 
 Expected: [32m\\"foo\\"[39m
 
@@ -36,7 +36,7 @@ Number of returns: [31m0[39m"
 `;
 
 exports[`sinonToReturnWith works with Immutable.js objects directly created 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
 
 Expected: not [32mImmutable.Map {\\"a\\": {\\"b\\": \\"c\\"}}[39m
 
@@ -44,7 +44,7 @@ Number of returns: [31m1[39m"
 `;
 
 exports[`sinonToReturnWith works with Immutable.js objects indirectly created 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
 
 Expected: not [32mImmutable.Map {\\"a\\": {\\"b\\": \\"c\\"}}[39m
 
@@ -52,7 +52,7 @@ Number of returns: [31m1[39m"
 `;
 
 exports[`sinonToReturnWith works with Map 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
 
 Expected: not [32mMap {1 => 2, 2 => 1}[39m
 
@@ -60,7 +60,7 @@ Number of returns: [31m1[39m"
 `;
 
 exports[`sinonToReturnWith works with Map 2`] = `
-"[2mexpect.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
 
 Expected: [32mMap {\\"a\\" => \\"b\\", \\"b\\" => \\"a\\"}[39m
 Received: [31mMap {1 => 2, 2 => 1}[39m
@@ -69,7 +69,7 @@ Number of returns: [31m1[39m"
 `;
 
 exports[`sinonToReturnWith works with Set 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
 
 Expected: not [32mSet {1, 2}[39m
 
@@ -77,7 +77,7 @@ Number of returns: [31m1[39m"
 `;
 
 exports[`sinonToReturnWith works with Set 2`] = `
-"[2mexpect.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
 
 Expected: [32mSet {3, 4}[39m
 Received: [31mSet {1, 2}[39m
@@ -86,7 +86,7 @@ Number of returns: [31m1[39m"
 `;
 
 exports[`sinonToReturnWith works with argument that does match 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
 
 Expected: not [32m\\"foo\\"[39m
 
@@ -94,7 +94,7 @@ Number of returns: [31m1[39m"
 `;
 
 exports[`sinonToReturnWith works with argument that does not match 1`] = `
-"[2mexpect.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
 
 Expected: [32m\\"bar\\"[39m
 Received: [31m\\"foo\\"[39m
@@ -103,7 +103,7 @@ Number of returns: [31m1[39m"
 `;
 
 exports[`sinonToReturnWith works with more calls than the limit 1`] = `
-"[2mexpect.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
 
 Expected: [32m\\"bar\\"[39m
 Received
@@ -115,7 +115,7 @@ Number of returns: [31m6[39m"
 `;
 
 exports[`sinonToReturnWith works with undefined 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToReturnWith[2m([22m[32mexpected[39m[2m)[22m
 
 Expected: not [32mundefined[39m
 

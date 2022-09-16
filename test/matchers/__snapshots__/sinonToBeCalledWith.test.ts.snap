@@ -18,7 +18,7 @@ Received has value: [31m[Function fn][39m"
 `;
 
 exports[`sinonToBeCalledWith works when not called 1`] = `
-"[2mexpect.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 Expected: [32m\\"foo\\"[39m, [32m\\"bar\\"[39m
 
@@ -26,7 +26,7 @@ Number of calls: [31m0[39m"
 `;
 
 exports[`sinonToBeCalledWith works with Immutable.js objects 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 Expected: not [32mImmutable.Map {\\"a\\": {\\"b\\": \\"c\\"}}[39m, [32mImmutable.Map {\\"a\\": {\\"b\\": \\"c\\"}}[39m
 
@@ -34,7 +34,7 @@ Number of calls: [31m1[39m"
 `;
 
 exports[`sinonToBeCalledWith works with Map 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 Expected: not [32mMap {1 => 2, 2 => 1}[39m
 
@@ -42,7 +42,7 @@ Number of calls: [31m1[39m"
 `;
 
 exports[`sinonToBeCalledWith works with Map 2`] = `
-"[2mexpect.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 [32m- Expected[39m
 [31m+ Received[39m
@@ -58,7 +58,7 @@ Number of calls: [31m1[39m"
 `;
 
 exports[`sinonToBeCalledWith works with Set 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 Expected: not [32mSet {1, 2}[39m
 
@@ -66,7 +66,7 @@ Number of calls: [31m1[39m"
 `;
 
 exports[`sinonToBeCalledWith works with Set 2`] = `
-"[2mexpect.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 [32m- Expected[39m
 [31m+ Received[39m
@@ -82,7 +82,7 @@ Number of calls: [31m1[39m"
 `;
 
 exports[`sinonToBeCalledWith works with arguments that don't match 1`] = `
-"[2mexpect.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 Expected: [32m\\"foo\\"[39m, [32m\\"bar\\"[39m
 Received: [2m\\"foo\\"[22m, [31m\\"bar1\\"[39m
@@ -91,7 +91,7 @@ Number of calls: [31m1[39m"
 `;
 
 exports[`sinonToBeCalledWith works with arguments that don't match in number of arguments 1`] = `
-"[2mexpect.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 Expected: [32m\\"foo\\"[39m, [32m\\"bar\\"[39m
 Received: [2m\\"foo\\"[22m, [2m\\"bar\\"[22m, [31m\\"plop\\"[39m
@@ -100,7 +100,7 @@ Number of calls: [31m1[39m"
 `;
 
 exports[`sinonToBeCalledWith works with arguments that don't match with matchers 1`] = `
-"[2mexpect.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 Expected: [32mAny<String>[39m, [32mAny<Number>[39m
 Received: [2m\\"foo\\"[22m, [31m\\"bar\\"[39m
@@ -109,7 +109,7 @@ Number of calls: [31m1[39m"
 `;
 
 exports[`sinonToBeCalledWith works with arguments that don't match with matchers even when argument is undefined 1`] = `
-"[2mexpect.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 Expected: [32m\\"foo\\"[39m, [32mAny<String>[39m
 Received: [2m\\"foo\\"[22m, [31mundefined[39m
@@ -118,7 +118,7 @@ Number of calls: [31m1[39m"
 `;
 
 exports[`sinonToBeCalledWith works with arguments that match 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 Expected: not [32m\\"foo\\"[39m, [32m\\"bar\\"[39m
 
@@ -126,7 +126,7 @@ Number of calls: [31m1[39m"
 `;
 
 exports[`sinonToBeCalledWith works with arguments that match with matchers 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 Expected: not [32mAny<String>[39m, [32mAny<String>[39m
 Received:     [31m0[39m, [31m[\\"foo\\", \\"bar\\"][39m
@@ -135,7 +135,7 @@ Number of calls: [31m1[39m"
 `;
 
 exports[`sinonToBeCalledWith works with many arguments 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 Expected: not [32m\\"foo\\"[39m, [32m\\"bar\\"[39m
 Received
@@ -145,7 +145,7 @@ Number of calls: [31m3[39m"
 `;
 
 exports[`sinonToBeCalledWith works with many arguments that don't match 1`] = `
-"[2mexpect.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 Expected: [32m\\"foo\\"[39m, [32m\\"bar\\"[39m
 Received
@@ -157,7 +157,7 @@ Number of calls: [31m3[39m"
 `;
 
 exports[`sinonToBeCalledWith works with trailing undefined arguments if requested by the match query 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 Expected: not [32m\\"foo\\"[39m, [32mundefined[39m
 
@@ -165,7 +165,7 @@ Number of calls: [31m1[39m"
 `;
 
 exports[`sinonToBeCalledWith works with trailing undefined arguments when explicitly requested as optional by matcher 1`] = `
-"[2mexpect.[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
+"[2mexpect([22m[31msinon.spy()[39m[2m).[22mnot[2m.[22msinonToBeCalledWith[2m([22m[32m...expected[39m[2m)[22m
 
 Expected: not [32m\\"foo\\"[39m, [32moptionalFn<>[39m
 Received:     [31m0[39m, [31m[\\"foo\\", undefined][39m

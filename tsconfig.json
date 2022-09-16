@@ -15,6 +15,7 @@
     "esModuleInterop": true
   },
   "include": [
-    "src"
+    "src",
+    "types"
   ]
 }
