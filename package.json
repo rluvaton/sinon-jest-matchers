@@ -13,6 +13,7 @@
     "prepare": "husky install",
     "build": "rm -rf lib && tsc -p tsconfig.build.json",
     "test": "jest",
+    "test:types": "tsc --noEmit types/index.d.ts",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint \"src/**/*.ts\" --fix",
     "semantic-release": "semantic-release"

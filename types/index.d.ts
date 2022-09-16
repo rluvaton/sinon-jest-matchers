@@ -122,7 +122,7 @@ declare namespace jest {
      * Optionally, you can provide a type for the expected value via a generic.
      * This is particularly useful for ensuring expected objects have the right structure.
      */
-    sinonNthReturnedWith<E = any>(n: number, value: E): R;
+    sinonNthReturnedWith<E = any>(n: number, value: E): any;
 
     /**
      * Ensure that a mock function has returned (as opposed to thrown) at least once.
