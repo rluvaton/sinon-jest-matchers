@@ -1,5 +1,5 @@
 # Sinon Jest Matchers
-![npm](https://img.shields.io/npm/v/sinon-jest-matchers)
+[![npm](https://img.shields.io/npm/v/sinon-jest-matchers)](https://www.npmjs.com/package/sinon-jest-matchers)
 
 ## Why
 
