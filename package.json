@@ -4,6 +4,7 @@
   "description": "Jest matchers for sinon",
   "files": [
     "lib",
+    "all.js",
     "types/index.d.ts"
   ],
   "main": "lib/index.js",

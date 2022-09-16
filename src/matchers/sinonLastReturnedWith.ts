@@ -8,7 +8,7 @@ import {
   printReceivedResults,
 } from '../utils/jest-utils';
 import sinon from 'sinon';
-import {convertSinonCallToJestResult, getSpyName} from '../utils/sinon-utils';
+import { convertSinonCallToJestResult, getSpyName } from '../utils/sinon-utils';
 
 const matcherName = 'sinonLastReturnedWith';
 

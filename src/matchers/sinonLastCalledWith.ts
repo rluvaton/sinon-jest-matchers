@@ -9,7 +9,7 @@ import {
   printReceivedCallsNegative,
 } from '../utils/jest-utils';
 import sinon from 'sinon';
-import {getSpyName} from "../utils/sinon-utils";
+import { getSpyName } from '../utils/sinon-utils';
 
 const matcherName = 'sinonLastCalledWith';
 

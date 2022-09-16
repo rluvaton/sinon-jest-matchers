@@ -6,7 +6,7 @@ import {
   printReceived,
 } from 'jest-matcher-utils';
 import { ensureSinonStubOrSpy } from '../utils/jest-utils';
-import {convertSinonCallToJestResult, getSpyName} from '../utils/sinon-utils';
+import { convertSinonCallToJestResult, getSpyName } from '../utils/sinon-utils';
 import sinon from 'sinon';
 
 const matcherName = 'sinonToReturnTimes';
