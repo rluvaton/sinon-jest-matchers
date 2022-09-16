@@ -16,10 +16,10 @@ Received: 1
 
 **After:**
 ```console
-expect(received).toEqual(expected) // deep equality
+expect(sinon.spy()).sinonToBeCalledTimes(expected)
 
-Expected: 2
-Received: 1
+Expected number of calls: 2
+Received number of calls: 1
 ```
 
 ### Deeper explanation:
@@ -38,10 +38,10 @@ test('Check that spy called', async () => {
 
 The error message will be:
 ```console
-expect(sinon.spy()).sinonToBeCalledTimes(expected)
+expect(received).toEqual(expected) // deep equality
 
-Expected number of calls: 2
-Received number of calls: 1
+Expected: 2
+Received: 1
 ```
 
 However, if you use this library, the test will look like this:
