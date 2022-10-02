@@ -1,7 +1,7 @@
 import { matcherHint, MatcherHintOptions, printExpected, stringify } from 'jest-matcher-utils';
 import {
   countReturns,
-  ensureSinonStubOrSpy,
+  ensureSinonSpy,
   IndexedResult,
   isEqualReturn,
   printNumberOfReturns,
@@ -18,7 +18,7 @@ export function sinonLastReturnedWith(this: any, received: sinon.SinonSpy, expec
     isNot: this.isNot,
     promise: this.promise,
   };
-  ensureSinonStubOrSpy(received, matcherName, expectedArgument, options);
+  ensureSinonSpy(received, matcherName, expectedArgument, options);
 
   const receivedName = getSpyName(received);
 
@@ -43,7 +43,7 @@ export function sinonLastReturnedWith(this: any, received: sinon.SinonSpy, expec
           `Expected: not ${printExpected(expected)}\n` +
           (results.length === 1 && results[0].type === 'return' && stringify(results[0].value) === stringify(expected)
             ? ''
-            : printReceivedResults('Received:     ', expected, indexedResults, results.length === 1, iLast)) +
+            : printReceivedResults('Received:     ', expected, indexedResults, received.calledOnce, iLast)) +
           printNumberOfReturns(countReturns(results), callCount)
         );
       }
@@ -70,7 +70,7 @@ export function sinonLastReturnedWith(this: any, received: sinon.SinonSpy, expec
           matcherHint(matcherName, receivedName, expectedArgument, options) +
           '\n\n' +
           `Expected: ${printExpected(expected)}\n` +
-          printReceivedResults('Received: ', expected, indexedResults, results.length === 1, iLast) +
+          printReceivedResults('Received: ', expected, indexedResults, received.calledOnce, iLast) +
           printNumberOfReturns(countReturns(results), callCount)
         );
       };

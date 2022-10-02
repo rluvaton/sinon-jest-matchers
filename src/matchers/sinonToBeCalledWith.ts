@@ -1,6 +1,6 @@
 import { matcherHint, MatcherHintOptions, printReceived, stringify } from 'jest-matcher-utils';
 import {
-  ensureSinonStubOrSpy,
+  ensureSinonSpy,
   IndexedCall,
   isEqualCall,
   isExpand,
@@ -24,11 +24,11 @@ export function sinonToBeCalledWith(
     promise: this.promise,
   };
 
-  ensureSinonStubOrSpy(received, matcherName, expectedArgument, options);
+  ensureSinonSpy(received, matcherName, expectedArgument, options);
 
   const receivedName = getSpyName(received);
 
-  const calls = received.getCalls().map((call) => call.args);
+  const calls = received.args;
 
   const pass = calls.some((call: any) => isEqualCall(expected, call));
 
@@ -50,7 +50,7 @@ export function sinonToBeCalledWith(
           `Expected: not ${printExpectedArgs(expected)}\n` +
           (calls.length === 1 && stringify(calls[0]) === stringify(expected)
             ? ''
-            : printReceivedCallsNegative(expected, indexedCalls, calls.length === 1)) +
+            : printReceivedCallsNegative(expected, indexedCalls, received.calledOnce)) +
           `\nNumber of calls: ${printReceived(calls.length)}`
         );
       }
@@ -66,7 +66,7 @@ export function sinonToBeCalledWith(
         return (
           matcherHint(matcherName, receivedName, expectedArgument, options) +
           '\n\n' +
-          printExpectedReceivedCallsPositive(expected, indexedCalls, isExpand(this.expand), calls.length === 1) +
+          printExpectedReceivedCallsPositive(expected, indexedCalls, isExpand(this.expand), received.calledOnce) +
           `\nNumber of calls: ${printReceived(calls.length)}`
         );
       };

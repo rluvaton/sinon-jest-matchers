@@ -289,7 +289,7 @@ export const printReceivedResults = (
   );
 };
 
-export const ensureSinonStubOrSpy = (
+export const ensureSinonSpy = (
   received: any,
   matcherName: string,
   expectedArgument: string,

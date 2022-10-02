@@ -5,7 +5,7 @@ import {
   printExpected,
   printReceived,
 } from 'jest-matcher-utils';
-import { ensureSinonStubOrSpy } from '../utils/jest-utils';
+import { ensureSinonSpy } from '../utils/jest-utils';
 import { getSpyName } from '../utils/sinon-utils';
 
 const matcherName = 'sinonToBeCalledTimes';
@@ -17,7 +17,7 @@ export function sinonToBeCalledTimes(this: any, received: sinon.SinonSpy | sinon
     promise: this.promise,
   };
   ensureExpectedIsNonNegativeInteger(expected, matcherName, options);
-  ensureSinonStubOrSpy(received, matcherName, expectedArgument, options);
+  ensureSinonSpy(received, matcherName, expectedArgument, options);
 
   const receivedName = getSpyName(received);
   const count = received.callCount;
