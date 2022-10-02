@@ -7,7 +7,7 @@ import {
   stringify,
 } from 'jest-matcher-utils';
 import {
-  ensureSinonStubOrSpy,
+  ensureSinonSpy,
   IndexedCall,
   isEqualCall,
   isExpand,
@@ -27,7 +27,7 @@ export function sinonNthCalledWith(this: any, received: sinon.SinonSpy, nth: num
     promise: this.promise,
     secondArgument: '...expected',
   };
-  ensureSinonStubOrSpy(received, matcherName, expectedArgument, options);
+  ensureSinonSpy(received, matcherName, expectedArgument, options);
 
   if (!Number.isSafeInteger(nth) || nth < 1) {
     throw new Error(
@@ -67,7 +67,7 @@ export function sinonNthCalledWith(this: any, received: sinon.SinonSpy, nth: num
           `Expected: not ${printExpectedArgs(expected)}\n` +
           (calls.length === 1 && stringify(calls[0]) === stringify(expected)
             ? ''
-            : printReceivedCallsNegative(expected, indexedCalls, calls.length === 1, iNth)) +
+            : printReceivedCallsNegative(expected, indexedCalls, received.calledOnce, iNth)) +
           `\nNumber of calls: ${printReceived(calls.length)}`
         );
       }
@@ -121,7 +121,7 @@ export function sinonNthCalledWith(this: any, received: sinon.SinonSpy, nth: num
           matcherHint(matcherName, receivedName, expectedArgument, options) +
           '\n\n' +
           `n: ${nth}\n` +
-          printExpectedReceivedCallsPositive(expected, indexedCalls, isExpand(this.expand), calls.length === 1, iNth) +
+          printExpectedReceivedCallsPositive(expected, indexedCalls, isExpand(this.expand), received.calledOnce, iNth) +
           `\nNumber of calls: ${printReceived(calls.length)}`
         );
       };
