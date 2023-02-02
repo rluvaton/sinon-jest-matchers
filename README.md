@@ -184,11 +184,27 @@ Equivalent to `.toHaveBeenCalledWith(arg1, arg2, ...)` and `.toBeCalledWith()` i
 
 ```js
 test('registration applies correctly to orange La Croix', () => {
+    const beverage = new LaCroix('orange');
+    register(beverage);
+    const f = sinon.spy();
+    applyToAll(f);
+    expect(f).sinonToBeCalledWith(beverage);
+});
+```
+
+### `.sinonToBeCalledTimesWith(number, arg1, arg2, ...)`
+
+Equivalent combination of `.sinonToBeCalledTimes(number)` with `.sinonToBeCalledWith(arg1, arg2, ...)`
+
+```js
+test('registration applies correctly to orange La Croix', () => {
   const beverage = new LaCroix('orange');
   register(beverage);
   const f = sinon.spy();
   applyToAll(f);
-  expect(f).sinonToBeCalledWith(beverage);
+  applyToAll(() => {});
+  applyToAll(f);
+  expect(f).sinonToBeCalledTimesWith(2, beverage);
 });
 ```
 
