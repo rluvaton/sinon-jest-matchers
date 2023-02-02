@@ -20,6 +20,14 @@ interface CustomMatchers<R> {
   sinonToBeCalledWith<E extends any[]>(...args: E): R;
 
   /**
+   * Ensure that a mock function is called with specific arguments a specific number of times.
+   *
+   * Optionally, you can provide a type for the expected arguments via a generic.
+   * Note that the type must be either an array or a tuple.
+   */
+  sinonToBeCalledTimesWith<E extends any[]>(expectedTimes: number, ...args: E): R;
+
+  /**
    * Ensures the last call to a mock function was provided specific args.
    *
    * Optionally, you can provide a type for the expected arguments via a generic.
@@ -117,6 +125,14 @@ declare namespace jest {
      * Note that the type must be either an array or a tuple.
      */
     sinonToBeCalledWith<E extends any[]>(...args: E): R;
+
+    /**
+     * Ensure that a mock function is called with specific arguments a specific number of time.
+     *
+     * Optionally, you can provide a type for the expected arguments via a generic.
+     * Note that the type must be either an array or a tuple.
+     */
+    sinonToBeCalledTimesWith<E extends any[]>(expectedTimes: number, ...args: E): R;
 
     /**
      * Ensure that a mock function has returned (as opposed to thrown) at least once.

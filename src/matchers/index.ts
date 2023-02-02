@@ -1,6 +1,7 @@
 export { sinonToBeCalled } from './sinonToBeCalled';
 export { sinonToBeCalledTimes } from './sinonToBeCalledTimes';
 export { sinonToBeCalledWith } from './sinonToBeCalledWith';
+export { sinonToBeCalledTimesWith } from './sinonToBeCalledTimesWith';
 export { sinonLastCalledWith } from './sinonLastCalledWith';
 export { sinonLastReturnedWith } from './sinonLastReturnedWith';
 export { sinonNthCalledWith } from './sinonNthCalledWith';
