@@ -41,7 +41,7 @@ jobs:
         run: npm run build
 
       - name: Publish project
-        run: npx semantic-release@^15
+        run: npx semantic-release
         env:
           # For some reason if we're using NPM_TOKEN: ${{ ... }} it wouldn't work as it said it's unauthorized
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
