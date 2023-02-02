@@ -72,6 +72,7 @@
     "stub"
   ],
   "dependencies": {
-    "@jest/expect-utils": "^29.0.3"
+    "@jest/expect-utils": "^29.0.3",
+    "jest-matcher-utils": "^29.4.1"
   }
 }

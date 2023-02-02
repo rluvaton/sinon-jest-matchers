@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sinonToBeCalledTimesWith includes the custom mock name in the error message 1`] = `
+"expect(named-mock).not.sinonToBeCalledTimesWith(...expected)
+
+Expected not to be called 1 times with: \\"foo\\", \\"bar\\"
+
+Number of calls: 1"
+`;
+
+exports[`sinonToBeCalledTimesWith works only on spies or sinon.spy 1`] = `
+"expect(received).sinonToBeCalledTimesWith(...expected)
+
+Matcher error: received value must be a stub or spy function
+
+Received has type:  function
+Received has value: [Function fn]"
+`;
+
+exports[`sinonToBeCalledTimesWith works when not called 1`] = `
+"expect(sinon.spy()).sinonToBeCalledTimesWith(...expected)
+
+Expected: \\"foo\\", \\"bar\\"
+
+Expected number of matching calls: 2
+Received number of matching calls: 0"
+`;
+
+exports[`sinonToBeCalledTimesWith works with Immutable.js objects 1`] = `
+"expect(sinon.spy()).not.sinonToBeCalledTimesWith(...expected)
+
+Expected not to be called 1 times with: Immutable.Map {\\"a\\": {\\"b\\": \\"c\\"}}, Immutable.Map {\\"a\\": {\\"b\\": \\"c\\"}}
+
+Number of calls: 1"
+`;
+
+exports[`sinonToBeCalledTimesWith works with Map 1`] = `
+"expect(sinon.spy()).not.sinonToBeCalledTimesWith(...expected)
+
+Expected not to be called 2 times with: Map {1 => 2, 2 => 1}
+Received
+       1:     Map {1 => 2, 2 => 1}
+       2:     Map {1 => 2, 2 => 1}
+
+Number of calls: 2"
+`;
+
+exports[`sinonToBeCalledTimesWith works with Map 2`] = `
+"expect(sinon.spy()).sinonToBeCalledTimesWith(...expected)
+
+Expected: Map {\\"a\\" => \\"b\\", \\"b\\" => \\"a\\"}
+Received
+       1
+          Map {
+        -   \\"a\\" => \\"b\\",
+        -   \\"b\\" => \\"a\\",
+        +   1 => 2,
+        +   2 => 1,
+          },
+       2
+          Map {
+        -   \\"a\\" => \\"b\\",
+        -   \\"b\\" => \\"a\\",
+        +   1 => 2,
+        +   2 => 1,
+          },
+       3
+          Map {\\"a\\" => \\"b\\", \\"b\\" => \\"a\\"},
+
+Expected number of matching calls: 2
+Received number of matching calls: 1"
+`;
+
+exports[`sinonToBeCalledTimesWith works with Set 1`] = `
+"expect(sinon.spy()).not.sinonToBeCalledTimesWith(...expected)
+
+Expected not to be called 2 times with: Set {1, 2}
+Received
+       1:     Set {1, 2}
+       2:     Set {1, 2}
+
+Number of calls: 2"
+`;
+
+exports[`sinonToBeCalledTimesWith works with Set 2`] = `
+"expect(sinon.spy()).sinonToBeCalledTimesWith(...expected)
+
+Expected: Set {3, 4}
+Received
+       1
+          Set {
+        -   3,
+        -   4,
+        +   1,
+        +   2,
+          },
+       2
+          Set {
+        -   3,
+        -   4,
+        +   1,
+        +   2,
+          },
+       3
+          Set {3, 4},
+
+Expected number of matching calls: 2
+Received number of matching calls: 1"
+`;
+
+exports[`sinonToBeCalledTimesWith works with arguments that don't match 1`] = `
+"expect(sinon.spy()).sinonToBeCalledTimesWith(...expected)
+
+Expected: \\"foo\\", \\"bar\\"
+Received
+       1: \\"foo\\", \\"bar\\"
+       2: \\"foo\\", \\"bar1\\"
+
+Expected number of matching calls: 2
+Received number of matching calls: 1"
+`;
+
+exports[`sinonToBeCalledTimesWith works with arguments that don't match in number of arguments 1`] = `
+"expect(sinon.spy()).sinonToBeCalledTimesWith(...expected)
+
+Expected: \\"foo\\", \\"bar\\"
+Received
+       1: \\"foo\\", \\"bar\\"
+       2: \\"foo\\", \\"bar\\", \\"plop\\"
+       3: \\"foo\\", \\"bar\\"
+
+Expected number of matching calls: 3
+Received number of matching calls: 2"
+`;
+
+exports[`sinonToBeCalledTimesWith works with arguments that don't match with matchers 1`] = `
+"expect(sinon.spy()).sinonToBeCalledTimesWith(...expected)
+
+Expected: Any<String>, Any<Number>
+Received
+       1: \\"foo\\", 1
+       2: \\"foo\\", \\"bar\\"
+
+Expected number of matching calls: 2
+Received number of matching calls: 1"
+`;
+
+exports[`sinonToBeCalledTimesWith works with arguments that don't match with matchers even when argument is undefined 1`] = `
+"expect(sinon.spy()).sinonToBeCalledTimesWith(...expected)
+
+Expected: \\"foo\\", Any<String>
+Received: \\"foo\\", undefined
+
+Expected number of matching calls: 1
+Received number of matching calls: 0"
+`;
+
+exports[`sinonToBeCalledTimesWith works with arguments that match 1`] = `
+"expect(sinon.spy()).not.sinonToBeCalledTimesWith(...expected)
+
+Expected not to be called 2 times with: \\"foo\\", \\"bar\\"
+Received
+       1:     \\"foo\\", \\"bar\\"
+       2:     \\"foo\\", \\"bar\\"
+
+Number of calls: 2"
+`;
+
+exports[`sinonToBeCalledTimesWith works with arguments that match with matchers 1`] = `
+"expect(sinon.spy()).not.sinonToBeCalledTimesWith(...expected)
+
+Expected not to be called 2 times with: Any<String>, Any<String>
+Received
+       1:     \\"foo\\", \\"bar\\"
+       2:     \\"foo\\", \\"bar\\"
+
+Number of calls: 2"
+`;
+
+exports[`sinonToBeCalledTimesWith works with many arguments 1`] = `
+"expect(sinon.spy()).not.sinonToBeCalledTimesWith(...expected)
+
+Expected not to be called 2 times with: \\"foo\\", \\"bar\\"
+Received
+       2:     \\"foo\\", \\"bar\\"
+       4:     \\"foo\\", \\"bar\\"
+
+Number of calls: 2"
+`;
+
+exports[`sinonToBeCalledTimesWith works with many arguments that don't match 1`] = `
+"expect(sinon.spy()).sinonToBeCalledTimesWith(...expected)
+
+Expected: \\"foo\\", \\"bar\\"
+Received
+       1: \\"foo\\", \\"bar1\\"
+       2: \\"foo\\", \\"bar\\"
+       3: \\"foo\\", \\"bar2\\"
+
+Expected number of matching calls: 2
+Received number of matching calls: 1"
+`;
+
+exports[`sinonToBeCalledTimesWith works with trailing undefined arguments if requested by the match query 1`] = `
+"expect(sinon.spy()).not.sinonToBeCalledTimesWith(...expected)
+
+Expected not to be called 2 times with: \\"foo\\", undefined
+Received
+       1:     \\"foo\\", undefined
+       2:     \\"foo\\", undefined
+
+Number of calls: 2"
+`;
+
+exports[`sinonToBeCalledTimesWith works with trailing undefined arguments when explicitly requested as optional by matcher 1`] = `
+"expect(sinon.spy()).not.sinonToBeCalledTimesWith(...expected)
+
+Expected not to be called 2 times with: \\"foo\\", optionalFn<>
+Received
+       1:     \\"foo\\", undefined
+       2:     \\"foo\\", undefined
+
+Number of calls: 2"
+`;
